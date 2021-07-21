@@ -17,3 +17,15 @@ to show the current user
 //show user
 to change the password of the current user
 //alter user SYSTEM identified by 1234;
+
+
+
+docker ps
+sudo docker run -d -p 1521:1521 epiclabs/docker-oracle-xe-11g 
+we will get a sha key
+sudo docker exec -it 3a96e607dc39dbc9209ce5766a0b7a32cf2bd0088aa9ec85b103c12af8bee0aa /bin/bash
+sha key always changes
+then run
+sqlplus system/oracle@//localhost:1521/xe
+
+there is only one database in oracle
