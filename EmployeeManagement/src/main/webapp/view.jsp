@@ -18,11 +18,6 @@
                 <a class ="navbar-brand">Employee Management System View</a>
             </div>
 
-            <ul class="navbar-nav">
-                <li><a href="<%=request.getContextPath()%>/view"
-                       class="nav-link">Back</a></li>
-            </ul>
-
             <button type="button" name="back" onclick="history.back()">back</button>
 
         </nav>
