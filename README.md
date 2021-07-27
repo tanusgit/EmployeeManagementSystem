@@ -26,12 +26,12 @@ Evan is a senior undergraduate student at San Jose State University, majoring in
     As part of this, Evan finds over twenty old textbooks from the bookshelf, cleans the cover, removes any bookmarks, and takes a photo. He creates an account on the iBook platform and follows the instruction to sell a book by entering the name, ISBN, and subject. However, when a buyer places an order, Evan needs to mail his textbook on his own with the iBook platform's information. Evan searches online for the nearest mail service. Google Map suggests that there are few UPS and FedEx stores within 5 miles of his address. As mail services are not integrated with the iBook platform, he manages to mail his book through UPS.
     
  ## Features of Epics:
- 1. Sell book
- 2. Enlist book
- 3. Create user account
+ 1. Add employee
+ 2. View employee
+ 3. Create employee account
  4. Login and logout
- 5. View book details
- 6. Buy book
+ 5. View details of each employee
+ 6. Delete employee
 
 ## FAQ
 Please login using your google account. This login functionality is not implemented yet.
