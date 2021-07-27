@@ -11,6 +11,9 @@ public class EmployeeView {
     private String jdbcDriver = "oracle.jdbc.OracleDriver";
 
     private String query1 = "select * from EMPLOYEE";
+    private static final String DELETE_USERS_SQL = "delete from EMPLOYEE where ID = ?;";
+    private static final String UPDATE_USERS_SQL = "update EMPLOYEE set NAME = ?,DEPARTMENT= ?, SALARY =? where ID = ?;";
+
 
     protected Connection getConnection(){
         Connection connection = null;
@@ -56,6 +59,16 @@ public class EmployeeView {
                 t = t.getCause();
             }
         }
+    }
+
+    boolean deleteEmployee(int id) throws SQLException {
+        boolean rowDeleted;
+        try (Connection connection = getConnection();
+             PreparedStatement statement = connection.prepareStatement("Delete from EMPLOYEE where ID=?");) {
+            statement.setInt(1, id);
+            rowDeleted = statement.executeUpdate() > 0;
+        }
+        return rowDeleted;
     }
 
 

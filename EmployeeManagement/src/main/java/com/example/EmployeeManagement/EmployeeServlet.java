@@ -7,12 +7,13 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "view", value = "/view")
+@WebServlet("/")
 public class EmployeeServlet extends HttpServlet {
     private EmployeeView emp;
 
     public void init() throws ServletException {
         emp = new EmployeeView();
+
     }
 
     @Override
@@ -33,8 +34,16 @@ public class EmployeeServlet extends HttpServlet {
                     e.printStackTrace();
                 }
                 break;
-            case "/delete": break;
-            default: break;
+            case "/delete":
+                try {
+                    deleteEmployee(request, response);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                break;
+            default:
+
+                break;
         }
     }
 
@@ -49,4 +58,14 @@ public class EmployeeServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
+
+    private void deleteEmployee(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, IOException, ServletException {
+
+        int id = Integer.parseInt(request.getParameter("id"));
+        emp.deleteEmployee(id);
+        response.sendRedirect("view");
+
+    }
+
 }

@@ -52,6 +52,7 @@
                                 <td ><c:out value = "${employee.name}" /></td>
                                 <td ><c:out value = "${employee.department}" /></td>
                                 <td ><c:out value = "${employee.salary}" /></td>
+                                <td><a href="delete?id=<c:out value='${employee.id}' />">Delete</a></td>
                             </tr>
                         </c:forEach>
                     </tbody>

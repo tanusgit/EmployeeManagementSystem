@@ -49,6 +49,8 @@
           <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-ws-addr:3.4.2" />
           <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-ws-policy:3.4.2" />
           <element id="library" level="project" name="Maven: org.apache.neethi:neethi:3.1.1" />
+          <element id="library" level="project" name="Maven: com.oracle:ojdbc8:21.1.0.0" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">
