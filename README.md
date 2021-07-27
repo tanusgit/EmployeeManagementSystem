@@ -25,7 +25,7 @@ Erik is an employee of a small startup. The number of employees are increasing i
 Evan is a senior undergraduate student at San Jose State University, majoring in computer science. He has finished all graduate requirements and is looking forward to graduating at the end of May. He decides to sell all his textbooks from the past for some cash to pay his student loan.
     As part of this, Evan finds over twenty old textbooks from the bookshelf, cleans the cover, removes any bookmarks, and takes a photo. He creates an account on the iBook platform and follows the instruction to sell a book by entering the name, ISBN, and subject. However, when a buyer places an order, Evan needs to mail his textbook on his own with the iBook platform's information. Evan searches online for the nearest mail service. Google Map suggests that there are few UPS and FedEx stores within 5 miles of his address. As mail services are not integrated with the iBook platform, he manages to mail his book through UPS.
     
- ## Features of iBook:
+ ## Features of Epics:
  1. Sell book
  2. Enlist book
  3. Create user account
@@ -34,20 +34,20 @@ Evan is a senior undergraduate student at San Jose State University, majoring in
  6. Buy book
 
 ## FAQ
-Please login using your google account.
+Please login using your google account. This login functionality is not implemented yet.
 
 ## License
-iBook.com
+Epics.com
 
 ## User guide:
-Please click on the "show details" button on the home page under the picture of the book to get the details of the book.
-Please click on the "Home" button on the navabr to go to the homepage of this website.
+Please click on the "view" button on the home page on the menubar to get the details of the employees.
+Please click on the "Add" button on the navabr to add an employee to the database.
 
 ## Support:
 We will provide support if anybody wants to contribute to our project.
 
 ## Roadmap:
-We aim to release the next version of iBook with the search option for the books.
+We aim to release the next version of Epics with the search option for the employees.
 
 ## Contributions:
 The developer team has built the product.
@@ -56,7 +56,7 @@ The developer team has built the product.
 Tanusree Debnath
 
 ## Developer team:
-Yulong Ran, Tanusree Debnath, William Tsai, Bowen Han, Nicholas Li
+Tanusree Debnath, Kevin Chang, Ngan Luu
 
 ## License
-iBook.com
+Epics.com
