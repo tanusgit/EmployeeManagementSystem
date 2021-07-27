@@ -1,9 +1,9 @@
 package com.example.EmployeeManagement;
 
 public class Employee {
-    int id;
     String name;
     String email;
+    int id;
     String country;
     String DOB;
     int salary;
@@ -12,21 +12,43 @@ public class Employee {
     int WorkHours;
     String department;
 
-    public Employee(int id, String name, String d, int s) {
-        this.id = id;
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", id=" + id +
+                ", country='" + country + '\'' +
+                ", DOB='" + DOB + '\'' +
+                ", salary=" + salary +
+                ", project='" + project + '\'' +
+                ", manager='" + manager + '\'' +
+                ", WorkHours=" + WorkHours +
+                ", department='" + department + '\'' +
+                '}';
+    }
+
+    public Employee(String name, String d, int s) {
         this.name = name;
         this.department  = d;
         this.salary = s;
     }
+    public Employee(int id, String name, String department, int salary) {
+        this.name = name;
+        this.department  = department;
+        this.salary = salary;
+        this.id = id;
+    }
+    public Employee() {
 
-    public int getId(){
+    }
+    public int getId() {
         return id;
     }
 
-    public void setId(int id){
+    public void setId(int id) {
         this.id = id;
     }
-
     public int getWorkHours() {
         return WorkHours;
     }
@@ -96,4 +118,5 @@ public class Employee {
     public void setCountry(String n) {
         this.country = n;
     }
+
 }
