@@ -11,8 +11,6 @@ public class EmployeeView {
     private String jdbcDriver = "oracle.jdbc.OracleDriver";
 
     private String query1 = "select * from EMPLOYEE";
-    private static final String DELETE_USERS_SQL = "delete from EMPLOYEE where ID = ?;";
-    private static final String UPDATE_USERS_SQL = "update EMPLOYEE set NAME = ?,DEPARTMENT= ?, SALARY =? where ID = ?;";
 
 
     protected Connection getConnection(){
@@ -27,6 +25,63 @@ public class EmployeeView {
         return connection;
     }
 
+    //tanu's insert fcn
+    public void registerEmployee(Employee employee) throws SQLException {
+        String s = "INSERT INTO EMPLOYEE (NAME, DEPARTMENT, SALARY) VALUES (?, ?, ?)";
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO SYSTEM.EMPLOYEE (ID, NAME, DEPARTMENT, SALARY) VALUES (?, ?, ?, ?)");) {
+            preparedStatement.setInt(1, employee.getId());
+            preparedStatement.setString(2, employee.getName());
+            preparedStatement.setString(3, employee.getDepartment());
+            preparedStatement.setInt(4, employee.getSalary());
+            System.out.println(preparedStatement);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+
+
+    }
+
+    public Employee selectUser(int id) {
+        Employee user = null;
+        // Step 1: Establishing a Connection
+        try (Connection connection = getConnection();
+             // Step 2:Create a statement using connection object
+             PreparedStatement preparedStatement = connection.prepareStatement("select * from EMPLOYEE where ID =?");) {
+            preparedStatement.setInt(1, id);
+            System.out.println(preparedStatement);
+            // Step 3: Execute the query or update query
+            ResultSet rs = preparedStatement.executeQuery();
+
+            // Step 4: Process the ResultSet object.
+            while (rs.next()) {
+                String name = rs.getString("name");
+                String department = rs.getString("department");
+                int salary = rs.getInt("salary");
+                user = new Employee(id, name, department, salary);
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+        return user;
+    }
+
+    public boolean updateUser(Employee user) throws SQLException {
+        boolean rowUpdated;
+        try (Connection connection = getConnection();
+             PreparedStatement statement = connection.prepareStatement("update EMPLOYEE set NAME = ?,DEPARTMENT= ?, SALARY =? where ID = ?")){
+            System.out.println("updated USer:"+statement);
+            statement.setString(1, user.getName());
+            statement.setString(2, user.getEmail());
+            statement.setString(3, user.getCountry());
+            statement.setInt(4, user.getId());
+
+            rowUpdated = statement.executeUpdate() > 0;
+        }
+        return rowUpdated;
+    }
+    //kevin's view fcn
     public List<Employee> selectAllUsers(){
         List<Employee> employees = new ArrayList<>();
         try (Connection connection = getConnection();
@@ -61,10 +116,11 @@ public class EmployeeView {
         }
     }
 
+    //Ngan's delete fcn
     boolean deleteEmployee(int id) throws SQLException {
         boolean rowDeleted;
         try (Connection connection = getConnection();
-             PreparedStatement statement = connection.prepareStatement("Delete from EMPLOYEE where ID=?");) {
+             PreparedStatement statement = connection.prepareStatement("Delete from EMPLOYEE where ID=?")) {
             statement.setInt(1, id);
             rowDeleted = statement.executeUpdate() > 0;
         }

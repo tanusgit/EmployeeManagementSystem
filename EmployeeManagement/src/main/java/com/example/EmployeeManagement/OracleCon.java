@@ -15,12 +15,7 @@ class OracleCon{
             Statement stmt=con.createStatement();
 
             //step4 execute query
-            ResultSet rs=stmt.executeQuery("select * from people");
-            System.out.println(rs);
-            while(rs.next()) {
-                System.out.println("inside while");
-                System.out.println(rs.getInt(1) + " " + rs.getString(2));
-            }
+
 
             //step5 close the connection object
             con.close();
