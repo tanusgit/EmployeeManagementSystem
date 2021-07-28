@@ -4,24 +4,25 @@
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 
-    <title>JSP - Hello World</title>
+    <title>Employee management system</title>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-      <!--  <a class="navbar-brand" href="add-employee">Add</a> -->
         <a class="navbar-brand" href="Add.html">Add</a>
+        <!--<a class="navbar-brand" ref="<%=request.getContextPath()%>/insert">Add</a>-->
+        <!-- <a class="navbar-brand" href="Add.html">Add</a>-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Delete</a>
+                    <a class="nav-link active" aria-current="page" href="">Delete</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="<%=request.getContextPath()%>/view">View</a>
+                    <a class="nav-link active" aria-current="page" href="">View</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Update</a>
@@ -36,30 +37,10 @@
 </nav>
 
 <h1><%= "Welcome to employ management system"%>
+    <img src="emp.png" alt=Welcome to employee management system>
 </h1>
-<table style="width:100%">
-    <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Age</th>
-    </tr>
-    <tr>
-        <td>Jill</td>
-        <td>Smith</td>
-        <td>50</td>
-    </tr>
-    <tr>
-        <td>Eve</td>
-        <td>Jackson</td>
-        <td>94</td>
-    </tr>
-    <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>80</td>
-    </tr>
-</table>
+
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<a href="">Home page</a>
 </body>
 </html>
