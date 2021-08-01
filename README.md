@@ -1,12 +1,15 @@
 # Employeemanagement System
 
 To run the website, 
-1. Clone the repo
-2. Set up Tomcat 9.0 server
-3. Download the oracle jbbc jar file from maven repository.
-4. Add the jar file to the dependency.
-5. Run 
-6. Go to http://localhost:8080/{server_name}
+1. Clone the repo in your local machine.
+3. Open the project in your favorite IDE (intellij)
+4. You should have a view like this one
+5. 
+6. Set up Tomcat 9.0 server
+7. Download the oracle jbbc jar file from maven repository.
+8. Add the jar file to the dependency.
+9. Run 
+10. Go to http://localhost:8080/{server_name}
 
 
 
