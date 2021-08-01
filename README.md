@@ -1,30 +1,30 @@
 # Employeemanagement System
 
-To run the website, 
-1. Clone the repo in your local machine.
-3. Open the project in your favorite IDE (intellij)
-4. You should have a view like this one
-5. 
-6. ![](pic/open-proj.png)
-7. 
-8. Set up Tomcat 9.0 server
-9. 
-10. ![](pic/tomcat1.png)
-11. 
-12. You need to configure tomcat according to your computer's configuration.
-13. 
-14. ![](pic/tomcat2.png)
-15. 
-16. Download the oracle jbbc jar file from maven repository.
-17. Add the jar file to the dependency.
-18. 
-19. ![](pic/jar.png)
-20. 
-21. Run Tomacat on from IDE
-22. 
-23. ![](pic/run.png)
-24. 
-25. Go to http://localhost:8080/{server_name}
+ To run the website, 
+ Clone the repo in your local machine.
+ Open the project in your favorite IDE (intellij)
+ You should have a view like this one
+ 
+ ![](pic/open-proj.png)
+ 
+Set up Tomcat 9.0 server
+
+![](pic/tomcat1.png)
+ 
+You need to configure tomcat according to your computer's configuration.
+
+ ![](pic/tomcat2.png)
+
+ Download the oracle jbbc jar file from maven repository.
+ Add the jar file to the dependency.
+ 
+![](pic/jar.png)
+
+Run Tomacat on from IDE
+
+![](pic/run.png)
+
+ Go to http://localhost:8080/{server_name}
 
 
 
