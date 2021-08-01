@@ -8,8 +8,9 @@ To run the website,
 6. Set up Tomcat 9.0 server
 7. Download the oracle jbbc jar file from maven repository.
 8. Add the jar file to the dependency.
-9. Run 
-10. Go to http://localhost:8080/{server_name}
+9. ![](pic/jar.png)
+10. Run 
+11. Go to http://localhost:8080/{server_name}
 
 
 
