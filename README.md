@@ -1,4 +1,4 @@
-# Employeemanagement System
+# Employee management System
 
  To run the website, 
  Clone the repo in your local machine.
